@@ -1,7 +1,18 @@
 package Aplikasi;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 import javafx.animation.*;
 import javafx.application.*;
 import javafx.fxml.FXML;
@@ -16,57 +27,56 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import javafx.util.Duration;
+
+
 
 public class loginPageController implements Initializable {
 
-    @FXML
-    private VBox vbox1;
-    @FXML
-    private ImageView imageView1;
-    @FXML
-    private ImageView imageView2;
-    private int currentImageIndex = 0;
+@FXML
+private TextField tfEmail;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        imageView1 = new ImageView();
-        imageView2 = new ImageView();
+@FXML 
+private PasswordField pfPassword;
 
-        imageView1.setImage(new Image(getClass().getResourceAsStream("login.jpg")));
-        imageView2.setImage(new Image(getClass().getResourceAsStream("elaine-casap-qgHGDbbSNm8-unsplash.jpg")));
-        vbox1.getChildren().addAll(imageView1, imageView2);
+@FXML
+private void login(){
+String Email = tfEmail.getText();
+String Password = pfPassword.getText();
 
-        // Start the slideshow
-        startSlideshow();
-    }
-
-    public void startSlideshow() {
-        Duration duration = Duration.seconds(3);
-
-        // Create a Timeline for the slideshow animation
-        Timeline timeline = new Timeline(
-                new KeyFrame(duration, event -> showNextImage()));
-
-        // Set the animation to repeat indefinitely
-        timeline.setCycleCount(Timeline.INDEFINITE);
-
-        // Start the animation
-        timeline.play();
-    }
-
-    private void showNextImage() {
-        // Increment the current image index
-        currentImageIndex++;
-
-        // Determine the index of the next image to be displayed
-        int nextImageIndex = currentImageIndex % 2;
-
-        // Load the next image and update the appropriate ImageView
-        if (nextImageIndex == 0) {
-            imageView1.setImage(new Image(getClass().getResourceAsStream("image1.jpg")));
-        } else {
-            imageView2.setImage(new Image(getClass().getResourceAsStream("image2.jpg")));
-        }
-    }
 }
+
+private boolean isValidLogin(String email, String password){
+    try{
+        File xmlFile = new File("Users.xml");
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbFactory.newDocumentBuilder();
+        Document doc = db.parse(xmlFile);
+        doc.getDocumentElement().normalize();
+
+        NodeList nodeList = doc.getElementsByTagName("user");
+        for (int i = 0; i < nodeList.getLength(); i++){
+            Node node = nodeList.item(i);
+            if(node.getNodeType() == Node.ELEMENT_NODE){
+                Element element = (Element) node;
+                String storedEmail = element.getElementsByTagName("email").item(0).getTextContent();
+                String storedPassword = element.getElementsByTagName("password").item(0).getTextContent();
+                if(storedEmail.equals(email) && storedPassword.equals(password)){
+                    return true;
+                }
+            }
+        }
+        
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return false;
+        }
+
+
+    }
+
+
+   
+
+   
+
