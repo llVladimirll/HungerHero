@@ -50,13 +50,13 @@ public class signUpController implements Initializable{
 
     private void storeUserInXML(User user){
         try{
-            File xmFile = new File("Users.xml");
+            File xmlFile = new File("Users.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc;
 
-            if(xmFile.exists()){
-                doc = dBuilder.parse(xmFile);
+            if(xmlFile.exists()){
+                doc = dBuilder.parse(xmlFile);
                 doc.getDocumentElement().normalize();
             }
          else {
@@ -70,7 +70,7 @@ public class signUpController implements Initializable{
 
         
         Element usernameElement = doc.createElement("username");
-        usernameElement.setTextContent(user.getUsername());
+        usernameElement.setTextContent(user.getEmail());
         userElement.appendChild(usernameElement);
 
        
