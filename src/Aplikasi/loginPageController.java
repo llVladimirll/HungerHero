@@ -39,7 +39,7 @@ public class loginPageController implements Initializable {
         String Email = tfEmail.getText();
         String Password = pfPassword.getText();
         if (isValidLogin(Email, Password)) {
-
+            
         } else {
 
         }
