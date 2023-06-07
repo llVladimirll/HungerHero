@@ -12,6 +12,9 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.animation.*;
 import javafx.application.*;
 import javafx.fxml.FXML;
@@ -21,11 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.*;
 
 public class loginPageController implements Initializable {
 
@@ -72,6 +71,12 @@ public class loginPageController implements Initializable {
             e.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
+        
     }
 
 }
