@@ -19,6 +19,8 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader((getClass().getResource("loginPage.fxml")));
         Parent root = loader.load();
 
+        String css = this.getClass().getResource("Design.css").toExternalForm();
+
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("hungerhero");
