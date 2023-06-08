@@ -4,12 +4,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="600.0" prefWidth="176.0" style="-fx-background-color: grey;">
+      <AnchorPane prefHeight="600.0" prefWidth="176.0" style="-fx-background-color: #617A55;">
          <children>
-            <Text layoutX="42.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAMA" wrappingWidth="90.5337142944336">
+            <Text layoutX="42.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="setName()" wrappingWidth="119.66231536865234">
                <font>
                   <Font size="24.0" />
                </font>
