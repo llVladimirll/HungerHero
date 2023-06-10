@@ -51,7 +51,7 @@ public class loginPageController implements Initializable{
 
     private boolean isValidLogin(String email, String password) {
         try {
-            File xmlFile = new File("Users.xml");
+            File xmlFile = new File("src/Aplikasi/Model/Users.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbFactory.newDocumentBuilder();
             Document doc = db.parse(xmlFile);
