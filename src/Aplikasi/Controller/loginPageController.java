@@ -8,12 +8,17 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 public class loginPageController implements Initializable{
 
@@ -24,13 +29,22 @@ public class loginPageController implements Initializable{
     private PasswordField pfPassword;
 
     @FXML
-    private void login() {
+    private Button loginButton;
+
+    @FXML
+    private void login() throws IOException {
         String Email = tfEmail.getText();
         String Password = pfPassword.getText();
         if (isValidLogin(Email, Password)) {
-            
-        } else {
+            Parent root = FXMLLoader.load(getClass().getResource("/Aplikasi/View/homePage"));
+            Scene scene = new Scene(root);
 
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+            stage.setScene(scene);
+
+
+        } else {
+            System.out.println("User not found");
         }
 
     }
