@@ -16,15 +16,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
     
-        FXMLLoader loader = new FXMLLoader((getClass().getResource("loginPage.fxml")));
+        FXMLLoader loader = new FXMLLoader((getClass().getResource("/Aplikasi/View/signUp.fxml")));
         Parent root = loader.load();
 
-        String css = this.getClass().getResource("Design.css").toExternalForm();
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("hungerhero");
+        primaryStage.setTitle("HungerHero");
         primaryStage.show();
-        primaryStage.setFullScreen(true);
     }
 }

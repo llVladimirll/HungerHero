@@ -1,21 +1,5 @@
-package Aplikasi;
+package Aplikasi.Controller;
 
-<<<<<<< HEAD
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-=======
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -27,17 +11,9 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.animation.*;
-import javafx.application.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.scene.control.*;
->>>>>>> f67a1c2bb89918aebf8045b020ac7af0b3e967e2
 
 public class loginPageController implements Initializable{
 
@@ -48,27 +24,6 @@ public class loginPageController implements Initializable{
     private PasswordField pfPassword;
 
     @FXML
-<<<<<<< HEAD
-    private Hyperlink hlSignup;
-
-    @FXML
-    private Hyperlink hlForgotPassword;
-
-    @FXML
-    private void login(ActionEvent event){
-    }
-
-    @FXML
-    private void signup (ActionEvent event) throws IOException{
-    };
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initialize'");
-    }
-    
-=======
     private void login() {
         String Email = tfEmail.getText();
         String Password = pfPassword.getText();
@@ -113,5 +68,4 @@ public class loginPageController implements Initializable{
         
     }
 
->>>>>>> f67a1c2bb89918aebf8045b020ac7af0b3e967e2
 }

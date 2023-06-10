@@ -1,12 +1,22 @@
-package Aplikasi;
+package Aplikasi.Controller;
 
+import Aplikasi.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -19,6 +29,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Document;
 
 import java.io.File;
+import java.io.IOException;
 
 public class signUpController implements Initializable{
 
@@ -34,9 +45,11 @@ public class signUpController implements Initializable{
     @FXML
     private PasswordField pfPassword;
 
+    @FXML
+    private Button regButton;
 
 
-    public void register(){
+    public void register(ActionEvent Event) throws IOException{
         String name = tfName.getText();
         String password = pfPassword.getText();
         String phoneNumber = tfPhoneNumber.getText();
@@ -46,11 +59,12 @@ public class signUpController implements Initializable{
 
         storeUserInXML(user);
 
+
     }
 
     private void storeUserInXML(User user){
         try{
-            File xmlFile = new File("Users.xml");
+            File xmlFile = new File("/Aplikasi/Model/Users.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc;
@@ -100,7 +114,7 @@ public class signUpController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initialize'");
+        
     }
 
 
