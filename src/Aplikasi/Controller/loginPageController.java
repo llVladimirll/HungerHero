@@ -36,11 +36,12 @@ public class loginPageController implements Initializable{
         String Email = tfEmail.getText();
         String Password = pfPassword.getText();
         if (isValidLogin(Email, Password)) {
-            Parent root = FXMLLoader.load(getClass().getResource("/Aplikasi/View/homePage"));
+            Parent root = FXMLLoader.load(getClass().getResource("/Aplikasi/View/homePage.fxml"));
             Scene scene = new Scene(root);
 
             Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.setScene(scene);
+            System.out.println("user Logged in successfully");
 
 
         } else {

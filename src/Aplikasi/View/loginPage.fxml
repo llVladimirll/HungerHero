@@ -41,7 +41,7 @@
             </Text>
             <TextField fx:id="tfEmail" layoutX="45.0" layoutY="184.0" prefHeight="42.0" prefWidth="311.0" />
             <PasswordField fx:id="pfPassword" layoutX="45.0" layoutY="315.0" prefHeight="42.0" prefWidth="311.0" />
-            <Button layoutX="43.0" layoutY="423.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="311.0" style="-fx-background-color: #213555;" text="Sign in" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="43.0" layoutY="423.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="311.0" style="-fx-background-color: #213555;" text="Sign in" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
