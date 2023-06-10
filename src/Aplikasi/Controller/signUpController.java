@@ -65,6 +65,9 @@ public class signUpController implements Initializable{
     private void storeUserInXML(User user){
         try{
             File xmlFile = new File("/Aplikasi/Model/Users.xml");
+            File parentDir = xmlFile.getParentFile();
+
+
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc;
