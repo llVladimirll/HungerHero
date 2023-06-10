@@ -55,16 +55,21 @@ public class signUpController implements Initializable{
         String phoneNumber = tfPhoneNumber.getText();
         String email = tfEmail.getText();
 
-        User user = new User(name, password, phoneNumber, email);
+        User user = new User(name, email, password, phoneNumber);
 
         storeUserInXML(user);
 
+        Parent root = FXMLLoader.load(getClass().getResource("/Aplikasi/View/loginPage.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) regButton.getScene().getWindow();
+        stage.setScene(scene);
 
     }
 
     private void storeUserInXML(User user){
         try{
-            File xmlFile = new File("/Aplikasi/Model/Users.xml");
+            File xmlFile = new File("src/Aplikasi/Model/Users.xml");
             File parentDir = xmlFile.getParentFile();
 
 
@@ -85,10 +90,18 @@ public class signUpController implements Initializable{
         
         Element userElement = doc.createElement("user");
 
+        Element nameElement = doc.createElement("name");
+        nameElement.setTextContent(user.getName());
+        userElement.appendChild(nameElement);
+
         
-        Element usernameElement = doc.createElement("username");
-        usernameElement.setTextContent(user.getEmail());
-        userElement.appendChild(usernameElement);
+        Element emailElement = doc.createElement("email");
+        emailElement.setTextContent(user.getEmail());
+        userElement.appendChild(emailElement);
+
+        Element phoneNumberElement = doc.createElement("phoneNumber");
+        phoneNumberElement.setTextContent(user.getPhoneNumber());
+        userElement.appendChild(phoneNumberElement);
 
        
         Element passwordElement = doc.createElement("password");
@@ -101,9 +114,14 @@ public class signUpController implements Initializable{
         
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
+        transformer.setOutputProperty("indent", "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+
         DOMSource source = new DOMSource(doc);
         StreamResult result = new StreamResult(xmlFile);
         transformer.transform(source, result);
+
+        
 
         System.out.println("User registered and stored in XML successfully.");
     }catch(Exception e){

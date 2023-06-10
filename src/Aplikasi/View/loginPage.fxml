@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.loginPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.loginPageController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
          <children>
@@ -56,7 +56,7 @@
          <children>
             <ImageView fitHeight="603.0" fitWidth="653.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/login.jpg" />
+                  <Image url="@../image/login.jpg" />
                </image>
             </ImageView>
          </children>
