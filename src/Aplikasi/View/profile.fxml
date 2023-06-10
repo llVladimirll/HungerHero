@@ -8,11 +8,42 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white;">
+         <children>
+            <Line endX="509.9058837890625" layoutX="140.0" layoutY="281.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
+            <Line endX="509.9058837890625" layoutX="140.0" layoutY="347.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
+            <Line endX="509.9058837890625" layoutX="140.0" layoutY="408.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
+            <Line endX="509.9058837890625" layoutX="140.0" layoutY="533.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
+            <Line endX="509.9058837890625" layoutX="140.0" layoutY="473.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
+            <Button layoutX="599.0" layoutY="252.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="599.0" layoutY="318.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="599.0" layoutY="379.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="599.0" layoutY="445.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="599.0" layoutY="504.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
       <Label layoutX="103.0" layoutY="48.0" prefHeight="41.0" prefWidth="113.0" text="Account" textFill="#434343">
          <font>
             <Font size="32.0" />
@@ -23,51 +54,26 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="210.0" layoutY="190.0" prefHeight="15.0" prefWidth="89.0" text="Name" textFill="#617a55">
+      <Label layoutX="120.0" layoutY="295.0" prefHeight="19.0" prefWidth="40.0" text="Name" textFill="#233555">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="210.0" layoutY="260.0" prefHeight="41.0" prefWidth="89.0" text="Email" textFill="#617a55">
+      <Label layoutX="120.0" layoutY="355.0" prefHeight="21.0" prefWidth="40.0" text="Email" textFill="#233555">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="209.0" layoutY="330.0" prefHeight="41.0" prefWidth="89.0" text="Password" textFill="#617a55">
+      <Label layoutX="119.0" layoutY="420.0" prefHeight="21.0" prefWidth="66.0" text="Password" textFill="#233555">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="210.0" layoutY="400.0" prefHeight="41.0" prefWidth="89.0" text="Address" textFill="#617a55">
+      <Label layoutX="120.0" layoutY="485.0" prefHeight="10.0" prefWidth="66.0" text="Address" textFill="#233555">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="411.0" layoutY="489.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: #617A55;" text="Edit Account" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="489.0" />
-      <Text layoutX="388.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="getName()" wrappingWidth="194.25632667541504">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Line endX="100.0" layoutX="482.0" layoutY="220.0" startX="-100.0" stroke="#434343" strokeWidth="1.7" />
-      <Text layoutX="388.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="getEmail()" wrappingWidth="194.25632667541504">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Line endX="100.0" layoutX="482.0" layoutY="295.0" startX="-100.0" stroke="#434343" strokeWidth="1.7" />
-      <Text layoutX="388.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="getPassword()" wrappingWidth="194.25632667541504">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Line endX="100.0" layoutX="482.0" layoutY="359.0" startX="-100.0" stroke="#434343" strokeWidth="1.7" />
-      <Text layoutX="388.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="getAddress()" wrappingWidth="194.25632667541504">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Line endX="100.0" layoutX="482.0" layoutY="429.0" startX="-100.0" stroke="#434343" strokeWidth="1.7" />
       <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/profile.png" />
@@ -93,6 +99,36 @@
             <Image url="@../image/logout.png" />
          </image>
       </ImageView>
-      <Circle fill="#434343" layoutX="386.0" layoutY="107.0" radius="50.0" stroke="#617a55" strokeType="INSIDE" strokeWidth="3.0" />
+      <Circle fill="#434343" layoutX="386.0" layoutY="155.0" radius="50.0" stroke="#233555" strokeType="INSIDE" strokeWidth="3.0" />
+      <Label layoutX="120.0" layoutY="230.0" prefHeight="19.0" prefWidth="93.0" text="Profile picture" textFill="#233555">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="254.0" prefHeight="19.0" prefWidth="128.0" text="Select the profile picture" textFill="#393939">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="319.0" prefHeight="19.0" prefWidth="195.0" text="Choose the name you want to display" textFill="#393939">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="380.0" prefHeight="19.0" prefWidth="128.0" text="Set your email" textFill="#393939">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="445.0" prefHeight="19.0" prefWidth="128.0" text="Set your password" textFill="#393939">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="507.0" prefHeight="19.0" prefWidth="128.0" text="Set your address" textFill="#393939">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
