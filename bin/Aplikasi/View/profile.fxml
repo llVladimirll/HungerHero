@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.ProfileController">
    <children>
       <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white;">
          <children>
@@ -43,6 +43,7 @@
                   <Font size="10.0" />
                </font>
             </Button>
+            <Label fx:id="lbName" layoutX="46.0" layoutY="330.0" prefHeight="17.0" prefWidth="106.0" />
          </children></AnchorPane>
       <Label layoutX="103.0" layoutY="48.0" prefHeight="41.0" prefWidth="113.0" text="Account" textFill="#434343">
          <font>
@@ -106,11 +107,6 @@
          </font>
       </Label>
       <Label layoutX="122.0" layoutY="254.0" prefHeight="19.0" prefWidth="128.0" text="Select the profile picture" textFill="#393939">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="122.0" layoutY="319.0" prefHeight="19.0" prefWidth="195.0" text="Choose the name you want to display" textFill="#393939">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

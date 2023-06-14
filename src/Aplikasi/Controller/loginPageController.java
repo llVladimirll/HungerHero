@@ -5,6 +5,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import Aplikasi.Database;
+import Aplikasi.User;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
@@ -33,22 +36,28 @@ public class loginPageController implements Initializable{
 
     @FXML
     private void login() throws IOException {
-        String Email = tfEmail.getText();
-        String Password = pfPassword.getText();
-        if (isValidLogin(Email, Password)) {
-            Parent root = FXMLLoader.load(getClass().getResource("/Aplikasi/View/homePage.fxml"));
-            Scene scene = new Scene(root);
+        String email = tfEmail.getText();
+    String password = pfPassword.getText();
 
-            Stage stage = (Stage) loginButton.getScene().getWindow();
-            stage.setScene(scene);
-            System.out.println("user Logged in successfully");
+    if (isValidLogin(email, password)) {
+        User loggedinUser = Database.getUserfromDatabase(email);
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Aplikasi/View/homePage.fxml"));
+        Parent root = loader.load();
+        homePageController homePageController = loader.getController();
+        homePageController.setLoggedInUser(loggedinUser);
 
-        } else {
-            System.out.println("User not found");
-        }
+        Scene scene = new Scene(root);
 
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        stage.setScene(scene);
+        System.out.println("User logged in successfully");
+    } else {
+        System.out.println("User not found");
     }
+}
+
+    
 
     private boolean isValidLogin(String email, String password) {
         try {
