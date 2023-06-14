@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white; -fx-background-radius: 15px 0 0 15px;">
          <children>
-            <ChoiceBox layoutX="48.0" layoutY="185.0" prefWidth="150.0" />
-            <Label layoutX="45.0" layoutY="48.0" prefHeight="41.0" prefWidth="241.0" text="Donation details" textFill="#434343">
+            <ChoiceBox layoutX="48.0" layoutY="185.0" prefHeight="26.0" prefWidth="186.0" />
+            <Label layoutX="42.0" layoutY="48.0" prefHeight="41.0" prefWidth="241.0" text="Donation details" textFill="#434343">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="88.0" text="Fill the form below to confirm your donation">
+            <Label layoutX="45.0" layoutY="88.0" text="Fill the form below to confirm your donation.">
                <font>
-                  <Font size="15.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <Label layoutX="45.0" layoutY="150.0" text="Food item">
@@ -48,37 +48,57 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="tfName1" layoutX="45.0" layoutY="435.0" prefHeight="40.0" prefWidth="150.0" />
-            <Button layoutX="319.0" layoutY="519.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #233555;" text="Button" textFill="WHITE">
+            <TextField fx:id="tfName1" layoutX="45.0" layoutY="435.0" prefHeight="40.0" prefWidth="196.0" />
+            <Button layoutX="319.0" layoutY="519.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #233555; -fx-background-radius: 9px;" text="Donate" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
          </children></AnchorPane>
-      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/profile.png" />
-         </image>
-      </ImageView>
-      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/home-3.png" />
-         </image>
-      </ImageView>
-      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/donate.png" />
-         </image>
-      </ImageView>
-      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/history.png" />
-         </image>
-      </ImageView>
-      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/logout.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="profileButton" layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigatetoprofileScreen" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/profile.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="16.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home-3.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="16.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/donate.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/history.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="18.0" layoutY="515.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>
