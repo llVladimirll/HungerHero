@@ -19,7 +19,7 @@
                   <Font size="32.0" />
                </font>
             </Text>
-            <BarChart layoutX="82.0" layoutY="185.0" prefHeight="369.0" prefWidth="536.0">
+            <BarChart fx:id="bcFood" layoutX="82.0" layoutY="185.0" prefHeight="369.0" prefWidth="536.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>

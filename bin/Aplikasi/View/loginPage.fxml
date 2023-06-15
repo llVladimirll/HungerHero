@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.loginPageController">
    <children>
-      <AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" stylesheets="@Design.css">
          <children>
             <Label layoutX="41.0" layoutY="78.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="249.0" text="Welcome back" textFill="#0a4d68">
                <font>
@@ -41,7 +41,7 @@
             </Text>
             <TextField fx:id="tfEmail" layoutX="45.0" layoutY="217.0" prefHeight="42.0" prefWidth="311.0" promptText="Enter your email" style="-fx-background-radius: 12px;" />
             <PasswordField fx:id="pfPassword" layoutX="45.0" layoutY="315.0" prefHeight="42.0" prefWidth="311.0" promptText="Enter your password" style="-fx-background-radius: 12px;" />
-            <Button fx:id="loginButton" layoutX="43.0" layoutY="409.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="311.0" style="-fx-background-color: #213555; -fx-background-radius: 12px;" text="Sign in" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="43.0" layoutY="409.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="311.0" style="-fx-background-color: #213555; -fx-background-radius: 12px;" styleClass="btn-login" text="Sign in" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>

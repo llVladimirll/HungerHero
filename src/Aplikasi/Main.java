@@ -18,6 +18,7 @@ public class Main extends Application {
     
         FXMLLoader loader = new FXMLLoader((getClass().getResource("/Aplikasi/View/loginPage.fxml")));
         Parent root = loader.load();
+        
 
 
         Scene scene = new Scene(root);

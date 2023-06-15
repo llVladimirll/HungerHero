@@ -12,12 +12,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class homePageController implements Initializable{
+    XYChart.Series data = new XYChart.Series<>();
     private User loggedinUser;
 
     @FXML
@@ -33,6 +36,9 @@ public class homePageController implements Initializable{
     ImageView imageView4 = new ImageView(logoutImage);
     Image donateImage = new Image("/Aplikasi/image/donate.png");
     ImageView imageView5 = new ImageView(donateImage);
+
+    @FXML
+    private BarChart bcFood;
 
 
 
@@ -58,7 +64,19 @@ public class homePageController implements Initializable{
         }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
+        data.getData().add(new XYChart.Data("January", 1050));
+        data.getData().add(new XYChart.Data("February", 1030));
+        data.getData().add(new XYChart.Data("March", 900));
+        data.getData().add(new XYChart.Data("April", 1075));
+        data.getData().add(new XYChart.Data("May", 1500));
+        data.getData().add(new XYChart.Data("June", 900));
+        data.getData().add(new XYChart.Data("July", 1200));
+        data.getData().add(new XYChart.Data("August", 1000));
+        data.getData().add(new XYChart.Data("September", 1000));
+        
+
+
+        bcFood.getData().addAll(data);
         
     }
     
