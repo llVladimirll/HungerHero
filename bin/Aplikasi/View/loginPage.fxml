@@ -24,11 +24,6 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="hlSignup" accessibleRole="HYPERLINK" layoutX="175.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="67.0" text="Sign up" textFill="#0a4d68">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
             <Text layoutX="53.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="41.98828125">
                <font>
                   <Font name="Quicksand Light" size="16.0" />
@@ -50,6 +45,12 @@
                   <Font size="12.0" />
                </font>
             </Text>
+            <Button layoutX="255.0" layoutY="153.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: transparent;" />
+            <Label fx:id="hlSignup" accessibleRole="HYPERLINK" layoutX="174.0" layoutY="123.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="52.0" text="Sign up" textFill="#0a4d68">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="400.0" prefHeight="600.0" prefWidth="400.0">

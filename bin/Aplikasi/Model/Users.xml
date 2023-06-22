@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <users>
+    
   
   <user>
+        
     <name>Vladi</name>
+        
     <email>v@gmail.com</email>
+        
     <phoneNumber>08696969</phoneNumber>
+        
     <password>012345</password>
+      
+  </user>
+  
+  <user>
+    <name>Jundullah</name>
+    <email>jundul@gmail.com</email>
+    <phoneNumber>1234</phoneNumber>
+    <password>12345</password>
   </user>
 </users>
