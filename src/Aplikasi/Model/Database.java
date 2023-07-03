@@ -5,7 +5,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
-import Aplikasi.Controller.ProfileController;
+import Aplikasi.Controller.ProfileControl;
 
 import java.io.File;
 

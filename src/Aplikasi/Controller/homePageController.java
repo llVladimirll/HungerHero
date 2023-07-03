@@ -46,11 +46,12 @@ public class homePageController implements Initializable{
         this.loggedinUser = Database.getUserfromDatabase(user.getEmail());
     }
 
+    @FXML
     public void navigatetoprofileScreen(ActionEvent event) throws IOException{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Aplikasi/View/profile.fxml"));
             Parent root = loader.load();
         
-            ProfileController profileController = loader.getController();
+            ProfileControl profileController = loader.getController();
             if (loggedinUser != null) {
                 String loggedInEmail = loggedinUser.getEmail();
                 User user = Database.getUserfromDatabase(loggedinUser.getEmail());
@@ -62,6 +63,7 @@ public class homePageController implements Initializable{
             stage.setScene(scene);
             stage.show();
         }
+        
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         data.getData().add(new XYChart.Data("January", 1050));

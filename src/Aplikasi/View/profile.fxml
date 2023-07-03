@@ -9,12 +9,12 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.ProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.ProfileControl">
    <children>
       <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white; -fx-background-radius: 15px 0 0 15px;">
          <children>
             <Circle fill="#434343" layoutX="349.0" layoutY="142.0" radius="50.0" stroke="#233555" strokeType="INSIDE" strokeWidth="3.0" />
-            <Label layoutX="40.0" layoutY="20.0" prefHeight="41.0" prefWidth="113.0" text="Account" textFill="#434343">
+            <Label layoutX="40.0" layoutY="20.0" prefHeight="47.0" prefWidth="128.0" text="Account" textFill="#434343">
                <font>
                   <Font size="32.0" />
                </font>
@@ -24,12 +24,12 @@
                   <Font size="12.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="210.0" prefHeight="19.0" prefWidth="93.0" text="Profile picture" textFill="#233555">
+            <Label layoutX="45.0" layoutY="210.0" prefHeight="21.0" prefWidth="105.0" text="Profile picture" textFill="#233555">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="234.0" prefHeight="19.0" prefWidth="128.0" text="Select the profile picture" textFill="#393939">
+            <Label layoutX="45.0" layoutY="234.0" prefHeight="19.0" prefWidth="146.0" text="Select the profile picture" textFill="#393939">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Font size="10.0" />
                </font>
             </Button>
-            <Label layoutX="45.0" layoutY="265.0" prefHeight="19.0" prefWidth="40.0" text="Name" textFill="#233555">
+            <Label layoutX="45.0" layoutY="265.0" prefHeight="21.0" prefWidth="54.0" text="Name" textFill="#233555">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -121,15 +121,6 @@
                </font>
             </Button>
          </children></AnchorPane>
-      <Button fx:id="profileButton" layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigatetoprofileScreen" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/profile.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
       <Button layoutX="16.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -166,5 +157,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/profile.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
