@@ -1,6 +1,6 @@
 package Aplikasi.Controller;
 
-import Aplikasi.Donate;
+import Aplikasi.Model.Donate;
 
 import java.io.File;
 import java.net.URL;
@@ -49,7 +49,7 @@ public class DonateController implements Initializable {
         String donateDate = calDonateDate.getTime().toString();
 
         
-        Donate donate = new Donate(foodItem, amount, donateDate, pickUp);
+        Donate donate = new Donate(foodItem, donateDate, amount, pickUp);
 
 
         storeDonateHistory(donate);
@@ -88,7 +88,7 @@ public class DonateController implements Initializable {
             donateDateElement.appendChild(donateDateElement);
 
             Element pickUpElement = doc.createElement("location");
-            pickUpElement.setTextContent(donate.getPickUpLocation());
+            pickUpElement.setTextContent(donate.getPickUp());
             pickUpElement.appendChild(pickUpElement);
 
             doc.getDocumentElement().appendChild(historyElement);

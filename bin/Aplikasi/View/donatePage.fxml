@@ -43,14 +43,14 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <DatePicker layoutX="51.0" layoutY="321.0" prefHeight="26.0" prefWidth="167.0" />
+            <DatePicker fx:id="calDonateDate" layoutX="51.0" layoutY="321.0" prefHeight="26.0" prefWidth="167.0" />
             <Label layoutX="53.0" layoutY="376.0" text="Pickup location">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
             <TextField fx:id="tfName1" layoutX="55.0" layoutY="417.0" prefHeight="30.0" prefWidth="196.0" />
-            <Button layoutX="319.0" layoutY="519.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #233555; -fx-background-radius: 9px;" text="Donate" textFill="WHITE">
+            <Button fx:id="btnDonate" layoutX="319.0" layoutY="519.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #233555; -fx-background-radius: 9px;" text="Donate" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>

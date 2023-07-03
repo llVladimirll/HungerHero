@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import Aplikasi.Database;
-import Aplikasi.User;
+import Aplikasi.Model.Database;
+import Aplikasi.Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

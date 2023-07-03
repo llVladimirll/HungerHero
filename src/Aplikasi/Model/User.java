@@ -1,4 +1,4 @@
-package Aplikasi;
+package Aplikasi.Model;
 
 public class User {
 

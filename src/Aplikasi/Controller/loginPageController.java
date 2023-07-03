@@ -5,8 +5,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import Aplikasi.Database;
-import Aplikasi.User;
+import Aplikasi.Model.Database;
+import Aplikasi.Model.User;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

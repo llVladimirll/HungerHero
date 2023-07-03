@@ -1,6 +1,5 @@
 package Aplikasi.Controller;
 
-import Aplikasi.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,6 +25,9 @@ import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import Aplikasi.Model.User;
+
 import org.w3c.dom.Document;
 
 import java.io.File;

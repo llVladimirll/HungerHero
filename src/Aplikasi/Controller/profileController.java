@@ -3,7 +3,7 @@ package Aplikasi.Controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import Aplikasi.User;
+import Aplikasi.Model.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
