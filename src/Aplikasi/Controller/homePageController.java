@@ -25,6 +25,15 @@ public class homePageController implements Initializable{
 
     @FXML
     private Button profileButton;
+    @FXML
+    private Button DonationButton,btExit;
+    
+@FXML
+public void exitApplication() {
+    System.exit(0);
+}
+    
+
 
     Image homeImage = new Image("/Aplikasi/image/home-3.png");
     ImageView imageView1 = new ImageView(homeImage);
@@ -46,6 +55,40 @@ public class homePageController implements Initializable{
         this.loggedinUser = Database.getUserfromDatabase(user.getEmail());
     }
 
+    
+    
+@FXML
+public void Donation(ActionEvent event) throws IOException {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Aplikasi/View/donatePage.fxml"));
+    Parent root = loader.load();
+
+    DonateController donate = loader.getController();
+    if (loggedinUser != null) {
+        String loggedInEmail = loggedinUser.getEmail();
+        User user = Database.getUserfromDatabase(loggedinUser.getEmail());
+        donate.setLoggedInUser(user);
+    }
+
+    Scene scene = new Scene(root);
+    Stage stage = (Stage) DonationButton.getScene().getWindow();
+    stage.setScene(scene);
+    stage.show();
+}
+@FXML
+private Button historyButton;
+
+@FXML
+public void goToHistory(ActionEvent event) throws IOException {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Aplikasi/View/historyPage.fxml"));
+    Parent root = loader.load();
+
+    Scene scene = new Scene(root);
+    Stage stage = (Stage) historyButton.getScene().getWindow();
+    stage.setScene(scene);
+    stage.show();
+}
+
+    
     @FXML
     public void navigatetoprofileScreen(ActionEvent event) throws IOException{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Aplikasi/View/profile.fxml"));

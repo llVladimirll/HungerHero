@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.homePageController">
    <children>
-      <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white; -fx-background-radius: 15px 0 0 15px;">
+      <AnchorPane fx:id="tableview" layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white; -fx-background-radius: 15px 0 0 15px;">
          <children>
             <Text layoutX="31.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Impact" wrappingWidth="195.0550765991211">
                <font>
@@ -34,50 +34,37 @@
             </Text>
          </children>
       </AnchorPane>
-      <Button layoutX="21.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-      <Button fx:id="profileButton" layoutX="14.0" layoutY="55.0" minWidth="41.0" mnemonicParsing="false" onAction="#navigatetoprofileScreen" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" x="17.0" y="54.0">
-               <image>
-                  <Image url="@../image/profile.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
-      <Button layoutX="17.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/home-3.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/donate.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/history.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button fx:id="DonationButton" layoutX="10.0" layoutY="236.0" mnemonicParsing="false" onAction="#Donation" style="-fx-background-color: transparent;" />
+      <Button fx:id="historyButton" layoutX="10.0" layoutY="326.0" mnemonicParsing="false" onAction="#goToHistory" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;" />
       <Button layoutX="17.0" layoutY="515.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
          <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/logout.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/home-3.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="profileButton" layoutX="10.0" layoutY="41.0" minWidth="41.0" mnemonicParsing="false" onAction="#navigatetoprofileScreen" onDragDetected="#navigatetoprofileScreen" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: transparent;" />
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/donate.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/history.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/profile.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

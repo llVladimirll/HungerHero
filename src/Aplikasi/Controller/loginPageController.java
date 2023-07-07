@@ -26,6 +26,9 @@ import javafx.stage.Stage;
 public class loginPageController implements Initializable{
 
     @FXML
+    private Button btSignUp;
+
+    @FXML
     private TextField tfEmail;
 
     @FXML
@@ -57,6 +60,15 @@ public class loginPageController implements Initializable{
     }
 }
 
+    public void navigateToSignUp() throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Aplikasi/View/signUp.fxml"));
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) btSignUp.getScene().getWindow();
+        stage.setScene(scene);
+    }
     
 
     private boolean isValidLogin(String email, String password) {

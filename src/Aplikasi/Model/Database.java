@@ -32,7 +32,8 @@ public class Database {
                     String Email = element.getElementsByTagName("email").item(0).getTextContent();
                     String phoneNumber = element.getElementsByTagName("phoneNumber").item(0).getTextContent();
                     String password = element.getElementsByTagName("password").item(0).getTextContent();
-                    return new User(name, Email, password, phoneNumber);
+                    String address = element.getElementsByTagName("address").item(0).getTextContent();
+                    return new User(name, Email, password, phoneNumber, address);
                    }
                 }
             }

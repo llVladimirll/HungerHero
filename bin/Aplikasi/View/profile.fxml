@@ -57,7 +57,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="343.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
+            <Label fx:id="lbEmail" layoutX="45.0" layoutY="343.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -85,7 +85,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="lbName2" layoutX="45.0" layoutY="452.0" prefHeight="17.0" prefWidth="106.0" />
+            <Label fx:id="lbPhoneNumber" layoutX="45.0" layoutY="452.0" prefHeight="17.0" prefWidth="106.0" />
             <Line endX="509.9058837890625" layoutX="140.0" layoutY="478.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
             <Button layoutX="599.0" layoutY="441.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555; -fx-background-radius: 5px;" text="Edit" textFill="WHITE">
                <font>
@@ -97,7 +97,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="507.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
+            <Label fx:id="lbAdress" layoutX="45.0" layoutY="507.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -121,33 +121,9 @@
                </font>
             </Button>
          </children></AnchorPane>
-      <Button layoutX="16.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/home-3.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/donate.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/history.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button layoutX="16.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+      <Button layoutX="16.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;" />
       <Button layoutX="16.0" layoutY="515.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -157,9 +133,24 @@
             </ImageView>
          </graphic>
       </Button>
-      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/profile.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/home-3.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/donate.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" layoutX="27.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/history.png" />
          </image>
       </ImageView>
    </children>

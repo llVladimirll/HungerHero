@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.ProfileControl">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #213555;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aplikasi.Controller.ProfileControl">
    <children>
       <AnchorPane layoutX="73.0" prefHeight="600.0" prefWidth="728.0" style="-fx-background-color: white; -fx-background-radius: 15px 0 0 15px;">
          <children>
@@ -57,7 +57,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="343.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
+            <Label fx:id="lbEmail" layoutX="45.0" layoutY="343.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -85,7 +85,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="lbName2" layoutX="45.0" layoutY="452.0" prefHeight="17.0" prefWidth="106.0" />
+            <Label fx:id="lbPhoneNumber" layoutX="45.0" layoutY="452.0" prefHeight="17.0" prefWidth="106.0" />
             <Line endX="509.9058837890625" layoutX="140.0" layoutY="478.0" startX="-92.74191284179688" stroke="#d8d8d8" strokeWidth="1.7" />
             <Button layoutX="599.0" layoutY="441.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="50.0" style="-fx-background-color: #233555; -fx-background-radius: 5px;" text="Edit" textFill="WHITE">
                <font>
@@ -97,7 +97,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="507.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
+            <Label fx:id="lbAdress" layoutX="45.0" layoutY="507.0" prefHeight="19.0" prefWidth="128.0" textFill="#393939">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -121,34 +121,31 @@
                </font>
             </Button>
          </children></AnchorPane>
-      <Button layoutX="16.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+      <Button fx:id="btHome" layoutX="16.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToHome" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/home-3.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         </graphic></Button>
+      <Button fx:id="btDonate" layoutX="16.0" layoutY="230.0" mnemonicParsing="false" onAction="#gotoDonate" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/donate.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         </graphic></Button>
+      <Button fx:id="btHistory" layoutX="16.0" layoutY="330.0" mnemonicParsing="false" onAction="#goToHistory" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/history.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="16.0" layoutY="515.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         </graphic></Button>
+      <Button fx:id="btExit" layoutX="16.0" layoutY="515.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -157,7 +154,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/profile.png" />
          </image>

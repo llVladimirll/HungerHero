@@ -36,13 +36,8 @@ import java.io.IOException;
 public class signUpController implements Initializable{
 
     @FXML
-    private TextField tfName;
+    private TextField tfName, tfEmail, tfPhoneNumber, tfAddress;
 
-    @FXML
-    private TextField tfPhoneNumber;
-
-    @FXML
-    private TextField tfEmail;
 
     @FXML
     private PasswordField pfPassword;
@@ -56,8 +51,9 @@ public class signUpController implements Initializable{
         String password = pfPassword.getText();
         String phoneNumber = tfPhoneNumber.getText();
         String email = tfEmail.getText();
+        String address = tfAddress.getText();
 
-        User user = new User(name, email, password, phoneNumber);
+        User user = new User(name, email, password, phoneNumber, address);
 
         storeUserInXML(user);
 
@@ -109,6 +105,10 @@ public class signUpController implements Initializable{
         Element passwordElement = doc.createElement("password");
         passwordElement.setTextContent(user.getPassword());
         userElement.appendChild(passwordElement);
+
+        Element addressElement = doc.createElement("address");
+        addressElement.setTextContent(user.getAddress());
+        userElement.appendChild(addressElement);
 
         
         doc.getDocumentElement().appendChild(userElement);
